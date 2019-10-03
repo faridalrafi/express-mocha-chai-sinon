@@ -7,7 +7,13 @@ let registration = (req, res) => {
     })
     }
     const { user } = req;
-    return res.status(201).json({ user });
+    return res.status(201).json(
+        { 
+            user,
+            success: true,
+            message: 'User Registration Success'
+         }
+        );
 }
 
 module.exports = { registration: registration }
